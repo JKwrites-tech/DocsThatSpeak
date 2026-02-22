@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunkdocs_that_speak=globalThis.webpackChunkdocs_that_speak||[]).push([[472],{5513(t){t.exports=JSON.parse('{"title":"All Posts","items":[{"title":"AI-Augmented Writing","permalink":"/DocsThatSpeak/blog/01-ai-augmented-writing","unlisted":false,"date":"2026-02-22T05:53:35.000Z"}]}')}}]);

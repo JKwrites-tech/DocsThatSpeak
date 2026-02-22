@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunkdocs_that_speak=globalThis.webpackChunkdocs_that_speak||[]).push([[499],{7278(a){a.exports=JSON.parse('{"tags":[{"label":"AI","permalink":"/DocsThatSpeak/blog/tags/ai","count":1},{"label":"Technical Writing","permalink":"/DocsThatSpeak/blog/tags/technical-writing","count":1}]}')}}]);
