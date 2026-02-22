@@ -1,1 +1,0 @@
-"use strict";(globalThis.webpackChunkdocs_that_speak=globalThis.webpackChunkdocs_that_speak||[]).push([[1903],{1912(a){a.exports=JSON.parse('{"blogBasePath":"/DocsThatSpeak/blog","blogTitle":"Blog","authorsListPath":"/DocsThatSpeak/blog/authors"}')}}]);
