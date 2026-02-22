@@ -2,35 +2,34 @@ import {themes as prismThemes} from 'prism-react-renderer';
 import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
-// This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
-
 const config: Config = {
-  title: 'My Site',
-  tagline: 'Dinosaurs are cool',
+  title: 'Jyoti Kiran',
+  tagline: 'Documentation Systems Architect | Content Strategist & Designer',
   favicon: 'img/favicon.ico',
 
-  // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
+  // Future flags
   future: {
-    v4: true, // Improve compatibility with the upcoming Docusaurus v4
+    v4: true,
   },
 
-  // Set the production url of your site here
-  url: 'https://jkwrites-tech.github.io',
-  // Set the /<baseUrl>/ pathname under which your site is served
-  // For GitHub pages deployment, it is often '/<projectName>/'
+  // Site URL & Base URL
+  url: 'https://JKwrites-tech.github.io',
   baseUrl: '/DocsThatSpeak/',
 
-  // GitHub pages deployment config.
-  // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'JKwrites-tech', // Usually your GitHub org/user name.
-  projectName: 'DocsThatSpeak', // Usually your repo name.
+  // GitHub Pages deployment
+  organizationName: 'JKwrites-tech',
+  projectName: 'DocsThatSpeak',
   deploymentBranch: 'gh-pages',
+  trailingSlash: false,
+
+  // Custom fields
+  customFields: {
+    deploymentUrl: 'https://JKwrites-tech.github.io/DocsThatSpeak/',
+  },
 
   onBrokenLinks: 'throw',
+  onBrokenMarkdownLinks: 'warn',
 
-  // Even if you don't use internationalization, you can use this field to set
-  // useful metadata like html lang. For example, if your site is Chinese, you
-  // may want to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: 'en',
     locales: ['en'],
@@ -42,10 +41,7 @@ const config: Config = {
       {
         docs: {
           sidebarPath: './sidebars.ts',
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+          editUrl:'https://github.com/JKwrites-tech/DocsThatSpeak/edit/main/', // Correctly points to your repo
         },
         blog: {
           showReadingTime: true,
@@ -55,11 +51,7 @@ const config: Config = {
             type: ['rss', 'atom'],
             xslt: true,
           },
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
-          // Useful options to enforce blogging best practices
+          editUrl:'https://github.com/JKwrites-tech/DocsThatSpeak/edit/main/blog/', // Correctly points to your repo
           onInlineTags: 'warn',
           onInlineAuthors: 'warn',
           onUntruncatedBlogPosts: 'warn',
@@ -72,13 +64,12 @@ const config: Config = {
   ],
 
   themeConfig: {
-    // Replace with your project's social card
     image: 'img/docusaurus-social-card.jpg',
     colorMode: {
       respectPrefersColorScheme: true,
     },
     navbar: {
-      title: 'My Site',
+      title: 'Docs That Speak',
       logo: {
         alt: 'My Site Logo',
         src: 'img/logo.svg',
@@ -88,12 +79,12 @@ const config: Config = {
           type: 'docSidebar',
           sidebarId: 'tutorialSidebar',
           position: 'left',
-          label: 'Tutorial',
+          label: 'Chapters',
         },
-        {to: '/blog', label: 'Blog', position: 'left'},
+        {to: '/docs/documentation-strategy', label: 'Docs', position: 'left'},
         {
-          href: 'https://github.com/facebook/docusaurus',
-          label: 'GitHub',
+          href: 'https://github.com/JKwrites-tech/DocsThatSpeak',
+          label: 'Repository',
           position: 'right',
         },
       ],
@@ -104,44 +95,25 @@ const config: Config = {
         {
           title: 'Docs',
           items: [
-            {
-              label: 'Tutorial',
-              to: '/docs/intro',
-            },
+            {label: 'Documentation Strategy', to: '/docs/documentation-strategy'},
           ],
         },
         {
           title: 'Community',
           items: [
-            {
-              label: 'Stack Overflow',
-              href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-            },
-            {
-              label: 'Discord',
-              href: 'https://discordapp.com/invite/docusaurus',
-            },
-            {
-              label: 'X',
-              href: 'https://x.com/docusaurus',
-            },
+            {label: 'Stack Overflow', href: 'https://stackoverflow.com/questions/tagged/docusaurus'},
+            {label: 'Discord', href: 'https://discordapp.com/invite/docusaurus'},
+            {label: 'X', href: 'https://x.com/docusaurus'},
           ],
         },
         {
           title: 'More',
           items: [
-            {
-              label: 'Blog',
-              to: '/blog',
-            },
-            {
-              label: 'GitHub',
-              href: 'https://github.com/facebook/docusaurus',
-            },
+            {label: 'GitHub', href: 'https://github.com/JKwrites-tech/DocsThatSpeak'},
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} Jyoti Kiran. Built with Docusaurus.`,
     },
     prism: {
       theme: prismThemes.github,
