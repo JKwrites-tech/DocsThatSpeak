@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" role="img" aria-label="Docs That Speak – JK Writes Tech">
+
+  <!-- Deep ink background -->
+  <rect width="32" height="32" rx="7" fill="#0f172a"/>
+
+  <!-- === DOCUMENT (the "Writes" part) === -->
+  <g transform="rotate(-4, 11.5, 14.5)">
+    <rect x="3.5" y="3.5" width="16" height="21" rx="2.2" fill="#f1f5f9"/>
+    <!-- Folded dog-ear corner -->
+    <polygon points="15.5,3.5 19.5,3.5 19.5,7.5" fill="#94a3b8" opacity="0.5"/>
+    <polygon points="15.5,3.5 15.5,7.5 19.5,7.5" fill="#e2e8f0"/>
+
+    <!-- Wavy text lines = handcrafted writing -->
+    <path d="M5.5 9.5 Q7 8.3 8.5 9.5 Q10 10.7 11.5 9.5 Q13 8.3 14.5 9.5 Q15.8 10.5 17 9.5"
+          stroke="#6366f1" stroke-width="1.15" fill="none" stroke-linecap="round"/>
+    <path d="M5.5 12.8 Q6.8 11.6 8 12.8 Q9.2 14 10.5 12.8 Q11.8 11.6 13 12.8 Q14.2 14 15.5 12.8"
+          stroke="#6366f1" stroke-width="1.15" fill="none" stroke-linecap="round" opacity="0.8"/>
+    <path d="M5.5 16 Q6.8 14.8 8 16 Q9.2 17.2 10.5 16 Q11.5 15.1 12.5 16"
+          stroke="#6366f1" stroke-width="1.15" fill="none" stroke-linecap="round" opacity="0.6"/>
+    <path d="M5.5 19.2 Q6.5 18.3 7.5 19.2 Q8.5 20.1 9.5 19.2"
+          stroke="#6366f1" stroke-width="1.15" fill="none" stroke-linecap="round" opacity="0.4"/>
+  </g>
+
+  <!-- === The spark: writing becomes voice === -->
+  <circle cx="20" cy="15" r="2.2" fill="#f59e0b"/>
+  <circle cx="20" cy="15" r="1.2" fill="#fde68a"/>
+
+  <!-- === SOUND WAVES (the "Speaks" part) === -->
+  <path d="M 22.5 11.5 C 26.5 11.5 26.5 18.5 22.5 18.5"
+        stroke="#34d399" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+  <path d="M 24.5 8.5 C 30.5 8.5 30.5 21.5 24.5 21.5"
+        stroke="#34d399" stroke-width="1.5" fill="none" stroke-linecap="round" opacity="0.6"/>
+  <path d="M 27 6 C 31.5 6 31.5 24 27 24"
+        stroke="#34d399" stroke-width="1.2" fill="none" stroke-linecap="round" opacity="0.3"/>
+
+</svg>
