@@ -8,6 +8,15 @@ export default function Home() {
       title="Jyoti Kiran"
       description="Documentation Systems Architect | Content Strategist & Designer">
       <main style={{padding: '4rem 2rem', textAlign: 'center'}}>
+
+        {/* HERO ANIMATED IMAGE — add this */}
+        <img
+          src="img/hero-animated.svg"
+          alt="Jyoti Kiran - Documentation Systems Architect"
+          width="540"
+          style={{ maxWidth: '100%', marginBottom: '1.5rem' }}
+        />
+
         <h1>Jyoti Kiran</h1>
         <h2>Documentation Systems Architect</h2>
         <p>
@@ -16,13 +25,19 @@ export default function Home() {
           product experience.
         </p>
 
+        {/* WELCOME NOTE LINK — add this */}
+        <p style={{marginTop: '1rem'}}>
+          <Link to="/blog/welcome">✍️ Welcome Note from the Author</Link>
+        </p>
+
         <div style={{marginTop: '2rem'}}>
           <Link
-            to="/docs/documentation-strategy"
+            to="/blog"
             className="button button--primary button--lg">
-            Explore Chapters
+            View Posts   {/* changed from Explore Chapters */}
           </Link>
         </div>
+
       </main>
     </Layout>
   );
