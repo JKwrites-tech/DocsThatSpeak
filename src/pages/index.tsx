@@ -19,9 +19,7 @@ export default function Home() {
         <h1>Jyoti Kiran</h1>
         <h2>Technical Writer & Content Designer</h2>
         <p style={{maxWidth: '600px', margin: '1rem auto'}}>
-          I build documentation that works for the person who has to use it —
-          scalable systems, developer portals, and content architectures that
-          transform documentation into product experience.
+          Practical insights on documentation strategy and next-gen writing.
         </p>
 
         <p style={{marginTop: '1rem'}}>
