@@ -4,25 +4,21 @@ import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
   title: 'Jyoti Kiran',
-  tagline: 'Documentation Systems Architect | Content Strategist & Designer',
+  tagline: 'Technical Writer & Content Designer',
   favicon: 'img/favicon.ico',
 
-  // Future flags
   future: {
     v4: true,
   },
 
-  // Site URL & Base URL
   url: 'https://JKwrites-tech.github.io',
   baseUrl: '/DocsThatSpeak/',
 
-  // GitHub Pages deployment
   organizationName: 'JKwrites-tech',
   projectName: 'DocsThatSpeak',
   deploymentBranch: 'gh-pages',
   trailingSlash: false,
 
-  // Custom fields
   customFields: {
     deploymentUrl: 'https://JKwrites-tech.github.io/DocsThatSpeak/',
   },
@@ -41,7 +37,7 @@ const config: Config = {
       {
         docs: {
           sidebarPath: './sidebars.ts',
-          editUrl:'https://github.com/JKwrites-tech/DocsThatSpeak/edit/main/', // Correctly points to your repo
+          editUrl: 'https://github.com/JKwrites-tech/DocsThatSpeak/edit/main/',
         },
         blog: {
           showReadingTime: true,
@@ -51,7 +47,7 @@ const config: Config = {
             type: ['rss', 'atom'],
             xslt: true,
           },
-          editUrl:'https://github.com/JKwrites-tech/DocsThatSpeak/edit/main/blog/', // Correctly points to your repo
+          editUrl: 'https://github.com/JKwrites-tech/DocsThatSpeak/edit/main/blog/',
           onInlineTags: 'warn',
           onInlineAuthors: 'warn',
           onUntruncatedBlogPosts: 'warn',
@@ -69,57 +65,76 @@ const config: Config = {
       respectPrefersColorScheme: true,
     },
     navbar: {
-  title: 'Docs That Speak',
-  logo: {
-    alt: 'Docs That Speak Logo',
-    src: 'img/logo.svg',
-  },
-  items: [
-    {
-      type: 'docSidebar',
-      sidebarId: 'strategySidebar',
-      position: 'left',
-      label: 'Documentation Strategy',
+      title: 'Docs That Speak',
+      logo: {
+        alt: 'Docs That Speak Logo',
+        src: 'img/logo.svg',
+      },
+      items: [
+        {
+          type: 'docSidebar',
+          sidebarId: 'strategySidebar',
+          position: 'left',
+          label: 'Documentation Strategy',
+        },
+        {
+          type: 'docSidebar',
+          sidebarId: 'nextgenSidebar',
+          position: 'left',
+          label: 'Next-Gen Docs',
+        },
+        {
+          to: '/about',
+          label: 'About the Author',
+          position: 'left',
+        },
+        {
+          href: 'https://github.com/JKwrites-tech/DocsThatSpeak',
+          label: 'Repository',
+          position: 'right',
+        },
+      ],
     },
-    {
-      type: 'docSidebar',
-      sidebarId: 'nextgenSidebar',
-      position: 'left',
-      label: 'Next-Gen Docs',
-    },
-    {
-      to: '/about',
-      label: 'About the Author',
-      position: 'left',
-    },
-    {
-      href: 'https://github.com/JKwrites-tech/DocsThatSpeak',
-      label: 'Repository',
-      position: 'right',
-    },
-  ],
-},
     footer: {
       style: 'dark',
       links: [
         {
           title: 'Docs',
           items: [
-            {label: 'Documentation Strategy', to: '/docs/documentation-strategy'},
+            {
+              label: 'Documentation Strategy',
+              to: '/docs/strategy/intro',
+            },
+            {
+              label: 'Next-Gen Docs',
+              to: '/docs/nextgen/intro',
+            },
           ],
         },
         {
-          title: 'Community',
+          title: 'Connect',
           items: [
-            {label: 'Stack Overflow', href: 'https://stackoverflow.com/questions/tagged/docusaurus'},
-            {label: 'Discord', href: 'https://discordapp.com/invite/docusaurus'},
-            {label: 'X', href: 'https://x.com/docusaurus'},
+            {
+              label: 'LinkedIn',
+              href: 'https://www.linkedin.com/in/jyoti-kiran-a48523116',
+            },
+            {
+              label: 'GitHub',
+              href: 'https://github.com/JKwrites-tech/DocsThatSpeak',
+            },
           ],
         },
         {
           title: 'More',
           items: [
-            {label: 'GitHub', href: 'https://github.com/JKwrites-tech/DocsThatSpeak'},
+            {
+              label: 'Welcome Note',
+              to: '/blog/welcome',
+            },
+            {
+              label: 'About the Author',
+              to: '/about',
+            },
           ],
         },
       ],
