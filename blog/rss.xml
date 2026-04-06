@@ -4,38 +4,25 @@
         <title>Jyoti Kiran Blog</title>
         <link>https://JKwrites-tech.github.io/DocsThatSpeak/blog</link>
         <description>Jyoti Kiran Blog</description>
-        <lastBuildDate>Sun, 22 Feb 2026 05:53:35 GMT</lastBuildDate>
+        <lastBuildDate>Wed, 01 Apr 2026 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
         <item>
-            <title><![CDATA[AI-Augmented Writing]]></title>
-            <link>https://JKwrites-tech.github.io/DocsThatSpeak/blog/01-ai-augmented-writing</link>
-            <guid>https://JKwrites-tech.github.io/DocsThatSpeak/blog/01-ai-augmented-writing</guid>
-            <pubDate>Sun, 22 Feb 2026 05:53:35 GMT</pubDate>
-            <description><![CDATA[By Shash [Jyothi Kiran Kadimi] — 22 Feb 2026 —]]></description>
-            <content:encoded><![CDATA[<p><em>By Shash [Jyothi Kiran Kadimi] — 22 Feb 2026 — <a href="https://www.linkedin.com/in/your-linkedin-id" target="_blank" rel="noopener noreferrer" style="margin-left:0.5rem"><img src="https://jkwrites-tech.github.io/img/linkedin.png" alt="LinkedIn" style="width:20px;height:20px;vertical-align:middle"></a></em></p>
-<hr>
-<p>AI is transforming technical writing. Writers can now use AI tools to:</p>
-<ul>
-<li class="">Generate first drafts</li>
-<li class="">Suggest content improvements</li>
-<li class="">Automate repetitive documentation tasks</li>
-</ul>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="benefits-of-ai-in-writing">Benefits of AI in Writing<a href="https://jkwrites-tech.github.io/DocsThatSpeak/blog/01-ai-augmented-writing#benefits-of-ai-in-writing" class="hash-link" aria-label="Direct link to Benefits of AI in Writing" title="Direct link to Benefits of AI in Writing" translate="no">​</a></h2>
-<ol>
-<li class="">Faster content creation</li>
-<li class="">Consistent style across docs</li>
-<li class="">Better structured information</li>
-</ol>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="how-to-start">How to Start<a href="https://jkwrites-tech.github.io/DocsThatSpeak/blog/01-ai-augmented-writing#how-to-start" class="hash-link" aria-label="Direct link to How to Start" title="Direct link to How to Start" translate="no">​</a></h2>
-<ul>
-<li class="">Experiment with AI-assisted writing tools</li>
-<li class="">Integrate AI in your content workflow</li>
-<li class="">Review and edit AI-generated content for accuracy</li>
-</ul>]]></content:encoded>
-            <category>AI</category>
-            <category>Technical Writing</category>
+            <title><![CDATA[Welcome Note from the Author]]></title>
+            <link>https://JKwrites-tech.github.io/DocsThatSpeak/blog/welcome</link>
+            <guid>https://JKwrites-tech.github.io/DocsThatSpeak/blog/welcome</guid>
+            <pubDate>Wed, 01 Apr 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[Welcome to Docs That Speak — a portfolio and knowledge space by Jyoti Kiran.]]></description>
+            <content:encoded><![CDATA[<p>Welcome to <strong>Docs That Speak</strong> — a portfolio and knowledge space by Jyoti Kiran.</p>
+<p>I'm a Senior Technical Writer and Lead Content Designer with 8+ years of experience
+turning complex products into clear, scalable documentation experiences.</p>
+<p>This site is where my docs come alive — from API references to content strategy,
+developer portals to UX writing. Everything here is built the way I believe
+documentation should be: structured, purposeful, and human.</p>
+<p>Thanks for stopping by. Explore the chapters, read the posts, and feel free to
+connect on <a href="https://linkedin.com/in/jyoti-kiran-a48523116" target="_blank" rel="noopener noreferrer" class="">LinkedIn</a>.</p>
+<p>— Jyoti</p>]]></content:encoded>
         </item>
     </channel>
 </rss>

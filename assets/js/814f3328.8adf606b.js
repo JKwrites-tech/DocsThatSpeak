@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunkdocs_that_speak=globalThis.webpackChunkdocs_that_speak||[]).push([[472],{5513(e){e.exports=JSON.parse('{"title":"All Posts","items":[{"title":"Welcome Note from the Author","permalink":"/DocsThatSpeak/blog/welcome","unlisted":false,"date":"2026-04-01T00:00:00.000Z"}]}')}}]);
