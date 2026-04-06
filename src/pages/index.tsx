@@ -18,7 +18,7 @@ export default function Home() {
         />
 
         <h1>Jyoti Kiran</h1>
-        <h2>Documentation Systems Architect</h2>
+        <h2>Technical Writer & Content Designer</h2>
         <p>
           I design scalable documentation systems, developer portals, 
           and content architectures that transform documentation into 

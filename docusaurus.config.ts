@@ -69,26 +69,36 @@ const config: Config = {
       respectPrefersColorScheme: true,
     },
     navbar: {
-      title: 'Docs That Speak',
-      logo: {
-        alt: 'My Site Logo',
-        src: 'img/logo.svg',
-      },
-      items: [
-        {
-          type: 'docSidebar',
-          sidebarId: 'tutorialSidebar',
-          position: 'left',
-          label: 'Chapters',
-        },
-        {to: '/docs/documentation-strategy', label: 'Docs', position: 'left'},
-        {
-          href: 'https://github.com/JKwrites-tech/DocsThatSpeak',
-          label: 'Repository',
-          position: 'right',
-        },
-      ],
+  title: 'Docs That Speak',
+  logo: {
+    alt: 'Docs That Speak Logo',
+    src: 'img/logo.svg',
+  },
+  items: [
+    {
+      type: 'docSidebar',
+      sidebarId: 'strategySidebar',
+      position: 'left',
+      label: 'Documentation Strategy',
     },
+    {
+      type: 'docSidebar',
+      sidebarId: 'nextgenSidebar',
+      position: 'left',
+      label: 'Next-Gen Docs',
+    },
+    {
+      to: '/about',
+      label: 'About the Author',
+      position: 'left',
+    },
+    {
+      href: 'https://github.com/JKwrites-tech/DocsThatSpeak',
+      label: 'Repository',
+      position: 'right',
+    },
+  ],
+},
     footer: {
       style: 'dark',
       links: [
