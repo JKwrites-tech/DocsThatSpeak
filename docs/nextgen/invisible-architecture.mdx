@@ -1,0 +1,235 @@
+---
+id: invisible-architecture
+title: The Architecture No One Sees
+sidebar_position: 4
+---
+
+import React from 'react';
+
+export function FortyThreeDiagram() {
+  const changes = [
+    {
+      label: 'Navigation reorganised',
+      before: {
+        heading: 'Internal structure',
+        items: ['Authentication Management', 'API Integration Layer', 'Event Processing Module', 'User Provisioning'],
+        note: 'Matches how the product team thinks about the system',
+      },
+      after: {
+        heading: 'User language',
+        items: ['Set up login and access', 'Connect to an API', 'Automate event triggers', 'Add and manage users'],
+        note: 'Matches the task the user already has in mind',
+      },
+    },
+    {
+      label: 'Categories relabelled',
+      before: {
+        heading: 'Product terminology',
+        items: ['Token Lifecycle', 'Scoped Permissions', 'OAuth Handshake', 'Session Invalidation'],
+        note: 'Precise but only meaningful to someone already familiar',
+      },
+      after: {
+        heading: 'Task-first language',
+        items: ['How tokens work and expire', 'Controlling what users can access', 'Connecting with OAuth', 'Logging users out securely'],
+        note: 'Understandable before the user has read anything',
+      },
+    },
+    {
+      label: 'Headings rewritten as questions',
+      before: {
+        heading: 'Topic labels',
+        items: ['Configuration Parameters', 'Error Handling', 'Rate Limits', 'Webhook Payload Structure'],
+        note: 'Describes what the section contains',
+      },
+      after: {
+        heading: 'Reader questions',
+        items: ['How do I configure the connection?', 'What should I do when a request fails?', 'Why is my request being throttled?', 'What does a webhook payload look like?'],
+        note: 'Matches the question already in the reader\'s head',
+      },
+    },
+  ];
+
+  return (
+    <div style={{ margin: '1.5rem 0 2rem' }}>
+      <div style={{
+        display: 'grid',
+        gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))',
+        gap: '10px',
+        marginBottom: '12px',
+      }}>
+        {changes.map((change, i) => (
+          <div key={i} style={{
+            background: 'var(--ifm-color-emphasis-100)',
+            border: '0.5px solid var(--ifm-color-emphasis-300)',
+            borderRadius: '12px',
+            overflow: 'hidden',
+          }}>
+            <div style={{
+              padding: '0.6rem 1rem',
+              background: 'var(--ifm-color-emphasis-200)',
+              borderBottom: '0.5px solid var(--ifm-color-emphasis-300)',
+              fontSize: '11px',
+              fontFamily: 'monospace',
+              fontWeight: 500,
+              letterSpacing: '0.07em',
+              textTransform: 'uppercase',
+              color: 'var(--ifm-color-emphasis-600)',
+            }}>{change.label}</div>
+
+            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', borderBottom: '0.5px solid var(--ifm-color-emphasis-300)' }}>
+              <div style={{
+                padding: '0.75rem 0.9rem',
+                borderRight: '0.5px solid var(--ifm-color-emphasis-300)',
+              }}>
+                <div style={{
+                  fontSize: '10px',
+                  fontFamily: 'monospace',
+                  textTransform: 'uppercase',
+                  letterSpacing: '0.06em',
+                  color: '#A32D2D',
+                  marginBottom: '0.5rem',
+                  fontWeight: 500,
+                }}>Before</div>
+                <div style={{ fontSize: '11px', fontWeight: 500, color: 'var(--ifm-color-emphasis-600)', marginBottom: '0.4rem' }}>{change.before.heading}</div>
+                <ul style={{ margin: 0, padding: '0 0 0 0.9rem' }}>
+                  {change.before.items.map((item, j) => (
+                    <li key={j} style={{ fontSize: '12px', color: 'var(--ifm-color-emphasis-700)', lineHeight: 1.65 }}>{item}</li>
+                  ))}
+                </ul>
+              </div>
+              <div style={{ padding: '0.75rem 0.9rem' }}>
+                <div style={{
+                  fontSize: '10px',
+                  fontFamily: 'monospace',
+                  textTransform: 'uppercase',
+                  letterSpacing: '0.06em',
+                  color: '#27500A',
+                  marginBottom: '0.5rem',
+                  fontWeight: 500,
+                }}>After</div>
+                <div style={{ fontSize: '11px', fontWeight: 500, color: 'var(--ifm-color-emphasis-600)', marginBottom: '0.4rem' }}>{change.after.heading}</div>
+                <ul style={{ margin: 0, padding: '0 0 0 0.9rem' }}>
+                  {change.after.items.map((item, j) => (
+                    <li key={j} style={{ fontSize: '12px', color: 'var(--ifm-color-emphasis-700)', lineHeight: 1.65 }}>{item}</li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+
+            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr' }}>
+              <div style={{
+                padding: '0.5rem 0.9rem',
+                fontSize: '11px',
+                color: '#A32D2D',
+                lineHeight: 1.5,
+                background: '#FFF5F5',
+                borderRight: '0.5px solid var(--ifm-color-emphasis-300)',
+              }}>{change.before.note}</div>
+              <div style={{
+                padding: '0.5rem 0.9rem',
+                fontSize: '11px',
+                color: '#27500A',
+                lineHeight: 1.5,
+                background: '#F4FAF0',
+              }}>{change.after.note}</div>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <div style={{
+        background: '#042C53',
+        borderRadius: '12px',
+        padding: '1rem 1.5rem',
+        display: 'flex',
+        alignItems: 'center',
+        gap: '1.5rem',
+        flexWrap: 'wrap',
+      }}>
+        <div>
+          <div style={{ fontSize: '40px', fontWeight: 500, color: '#fff', lineHeight: 1, fontFamily: 'monospace' }}>43%</div>
+          <div style={{ fontSize: '11px', color: '#B5D4F4', opacity: 0.8, marginTop: '4px', letterSpacing: '0.05em', textTransform: 'uppercase', fontFamily: 'monospace' }}>reduction in time-to-task</div>
+        </div>
+        <div style={{ flex: 1, minWidth: '200px' }}>
+          <div style={{ fontSize: '13px', color: '#fff', lineHeight: 1.65, opacity: 0.9 }}>
+            None of the underlying content changed. The prose in most articles stayed exactly as it was. The improvement came entirely from the three structural changes shown above.
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+# The Architecture No One Sees
+
+Nobody notices a good content structure. That is exactly the point.
+
+When information architecture is working, users find what they need quickly, move between related topics naturally, and never feel lost inside a documentation set. They do not think about the structure at all. They simply experience the result of it.
+
+When it fails, the opposite happens. Users click into a category and find the wrong thing. They search and land on a page that almost answers their question. They navigate to a section labelled with a term they do not use themselves. They give up and open a support ticket.
+
+The architecture was invisible in both cases. In the first, it was invisibly good. In the second, it was invisibly broken.
+
+---
+
+## What a content model actually is
+
+A content model is the decision about what types of content exist in a documentation set, what each type is responsible for, and how they relate to each other. It is the structural logic underneath every article. It is the reason a reference page looks and feels different from a tutorial, and why that difference matters to the reader.
+
+The most widely used content model in technical documentation separates content into three types.
+
+**Concept topics** answer the question: *what is this?* They explain a feature, a system, or a principle. They do not contain procedures. A user reads a concept topic to understand something before they take any action.
+
+**Task topics** answer the question: *how do I do this?* They contain numbered steps, prerequisites, and expected results. They do not contain explanations of how things work under the hood. That belongs in a concept topic. A user reads a task topic when they are ready to act.
+
+**Reference topics** answer the question: *what are the exact details?* API parameters, error code definitions, configuration values, field descriptions. Dense, precise, non-narrative. A user goes to a reference topic when they need a specific detail. They do not read it from start to finish.
+
+---
+
+## Why mixing these types breaks documentation
+
+The most common structural failure in documentation is mixing topic types within a single article. A procedure with three paragraphs of background explanation halfway through. A concept article that ends with a set of steps. A reference page that includes a tutorial.
+
+The problem is not about aesthetics. It is functional.
+
+When task and concept content are mixed, users completing a procedure have to skip over explanatory text to follow the steps. When concept and reference content are mixed, users looking for a specific detail have to scan through narrative paragraphs to find it. Every paragraph a user has to evaluate and discard costs time and patience.
+
+Separating content by type does not mean treating every piece of information in isolation. Related concepts, tasks, and reference material link to each other. The separation ensures that each piece of content does one job well, and users can navigate to the depth they need without being pushed through depth they do not need.
+
+---
+
+## Information architecture at the navigation level
+
+Content model governs what goes inside an article. Information architecture governs how articles are organised, labelled, and connected at the navigation level: the categories, sidebar structure, and headings users encounter before they reach any content at all.
+
+The most important principle at this level is straightforward: labels should use the user's language, not the product team's language.
+
+Internal product terminology, feature names, module labels, architectural terms, is often the natural language for the documentation team because the team lives inside the product. It is rarely natural for the user, who arrives from the outside with a task or a question already in mind.
+
+A navigation structure built on internal terminology forces users to translate before they can navigate. The extra effort is small for any single step, but across a documentation set it adds up into the experience of documentation that is technically complete but practically hard to use.
+
+---
+
+## What a structural redesign actually changes
+
+A redesigned information architecture across a documentation set for a major enterprise product reduced time-to-task by 43%. That number did not come from better writing. The prose in most articles was largely unchanged. It came from three specific structural changes.
+
+<FortyThreeDiagram />
+
+Users could find things faster because the architecture met them where they were, using the language of their task, rather than asking them to find their way into the language of the product.
+
+That is the work of information architecture. It happens before the first word of any article is written, and it shapes whether every article in the documentation set will ever be found.
+
+---
+
+## A practical starting point
+
+If you are building a documentation architecture from scratch, or restructuring an existing one, start with this exercise before touching any content.
+
+Write down the ten questions your users ask most frequently, drawn from support tickets, search queries, or direct conversations with users. These are the real entry points to your documentation.
+
+Now look at your current navigation and ask: if a user arrived with one of these ten questions, what path would they follow, and would it lead them to the right answer in under three clicks?
+
+If the answer is no for most of those ten questions, the architecture is not serving your users, regardless of how well the content inside it is written.
+
+The architecture no one sees is the reason good content gets found or does not. It is worth getting right before the content is written, not after.
