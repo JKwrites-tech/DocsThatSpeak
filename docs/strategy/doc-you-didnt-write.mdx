@@ -1,0 +1,213 @@
+---
+id: doc-you-didnt-write
+title: The Doc You Didn't Write Is the Ticket You'll Get
+sidebar_position: 2
+---
+
+import React, { useState } from 'react';
+
+export function GapCard({ tag, tagBg, tagColor, title, base, detail }) {
+  const [hovered, setHovered] = useState(false);
+  return (
+    <div
+      onMouseEnter={() => setHovered(true)}
+      onMouseLeave={() => setHovered(false)}
+      style={{
+        background: hovered ? 'var(--ifm-color-emphasis-0, #fff)' : 'var(--ifm-color-emphasis-100)',
+        border: `0.5px solid ${hovered ? 'var(--ifm-color-emphasis-400)' : 'var(--ifm-color-emphasis-300)'}`,
+        borderRadius: '12px',
+        padding: '1rem 1.1rem',
+        cursor: 'default',
+        transition: 'all 0.2s',
+      }}
+    >
+      <span style={{
+        display: 'inline-block',
+        background: tagBg,
+        color: tagColor,
+        fontSize: '10px',
+        fontFamily: 'monospace',
+        fontWeight: 500,
+        letterSpacing: '0.07em',
+        textTransform: 'uppercase',
+        padding: '3px 8px',
+        borderRadius: '4px',
+        marginBottom: '0.6rem',
+      }}>{tag}</span>
+      <div style={{ fontSize: '14px', fontWeight: 500, marginBottom: '0.35rem' }}>{title}</div>
+      <div style={{ fontSize: '13px', color: 'var(--ifm-color-emphasis-700)', lineHeight: 1.6 }}>{base}</div>
+      {hovered && (
+        <div style={{
+          fontSize: '12px',
+          color: 'var(--ifm-color-emphasis-600)',
+          lineHeight: 1.65,
+          marginTop: '0.6rem',
+          paddingTop: '0.6rem',
+          borderTop: '0.5px solid var(--ifm-color-emphasis-300)',
+        }}>{detail}</div>
+      )}
+    </div>
+  );
+}
+
+export function StepCard({ num, title, base, detail }) {
+  const [hovered, setHovered] = useState(false);
+  return (
+    <div
+      onMouseEnter={() => setHovered(true)}
+      onMouseLeave={() => setHovered(false)}
+      style={{
+        background: 'var(--ifm-color-emphasis-0, #fff)',
+        border: `0.5px solid ${hovered ? 'var(--ifm-color-emphasis-400)' : 'var(--ifm-color-emphasis-300)'}`,
+        borderRadius: '12px',
+        padding: '1rem 1.1rem',
+        cursor: 'default',
+        transition: 'all 0.2s',
+        transform: hovered ? 'translateY(-2px)' : 'none',
+      }}
+    >
+      <div style={{ fontFamily: 'monospace', fontSize: '22px', fontWeight: 500, color: 'var(--ifm-color-emphasis-400)', marginBottom: '0.4rem' }}>{num}</div>
+      <div style={{ fontSize: '13px', fontWeight: 500, marginBottom: '0.3rem' }}>{title}</div>
+      <div style={{ fontSize: '12px', color: 'var(--ifm-color-emphasis-700)', lineHeight: 1.6 }}>{base}</div>
+      {hovered && (
+        <div style={{
+          fontSize: '12px',
+          color: 'var(--ifm-color-emphasis-600)',
+          lineHeight: 1.65,
+          marginTop: '0.5rem',
+          paddingTop: '0.5rem',
+          borderTop: '0.5px solid var(--ifm-color-emphasis-300)',
+        }}>{detail}</div>
+      )}
+    </div>
+  );
+}
+
+export function MetricBar() {
+  return (
+    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '10px', margin: '1.5rem 0' }}>
+      <div style={{ background: '#042C53', borderRadius: '12px', padding: '1.1rem 1.25rem', color: '#B5D4F4' }}>
+        <div style={{ fontSize: '11px', letterSpacing: '0.06em', textTransform: 'uppercase', opacity: 0.7, marginBottom: '0.25rem', fontFamily: 'monospace' }}>Ticket deflection rate</div>
+        <div style={{ fontSize: '32px', fontWeight: 500, color: '#fff', lineHeight: 1, margin: '0.25rem 0 0.35rem' }}>10%</div>
+        <div style={{ fontSize: '12px', lineHeight: 1.55, opacity: 0.75 }}>improvement at 5,000 tickets per month saves 500 tickets before accounting for satisfaction gains.</div>
+      </div>
+      <div style={{ background: 'var(--ifm-color-emphasis-100)', border: '0.5px solid var(--ifm-color-emphasis-300)', borderRadius: '12px', padding: '1.1rem 1.25rem' }}>
+        <div style={{ fontSize: '11px', letterSpacing: '0.06em', textTransform: 'uppercase', color: 'var(--ifm-color-emphasis-500)', marginBottom: '0.4rem', fontFamily: 'monospace' }}>In practice</div>
+        <div style={{ fontSize: '13px', fontWeight: 500, marginBottom: '0.3rem' }}>Jiffy.AI: 36% to 71% CSAT</div>
+        <div style={{ fontSize: '12px', color: 'var(--ifm-color-emphasis-700)', lineHeight: 1.6 }}>Customer satisfaction nearly doubled in under a year. The primary driver was not a product change. It was closing the gap between what users were struggling with and what the documentation addressed. That gap was visible in the ticket queue the entire time.</div>
+      </div>
+    </div>
+  );
+}
+
+# The Doc You Didn't Write Is the Ticket You'll Get
+
+Not every support ticket points back to documentation. Some are product bugs. Some are UX problems. Some are just edge cases that nobody anticipated.
+
+But a surprising number of them are things your docs could have prevented. And once you start reading your ticket queue that way, it becomes one of the most useful signals you have.
+
+---
+
+## Why documentation gaps are hard to spot
+
+Nobody files a ticket that says *"I need a troubleshooting guide for the invoice upload failure at step 3."* They say *"it's broken"* or *"I don't get it"* or they say nothing at all and quietly stop using the feature.
+
+That is what makes documentation gaps easy to miss. They do not announce themselves. They show up as frustrated users, repeated questions, and support load that just keeps growing.
+
+By the time a pattern becomes obvious enough to notice, a lot of users have already had a bad experience. The earlier you start reading the ticket queue as a content signal, the faster you get ahead of it.
+
+---
+
+## The four gap types
+
+When a ticket does point to a documentation opportunity, it usually falls into one of these four categories. Hover each card to see what it looks like in practice.
+
+<div style={{display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '10px', margin: '1.25rem 0 2rem'}}>
+  <GapCard
+    tag="Unknown feature"
+    tagBg="#EAF3DE"
+    tagColor="#3B6D11"
+    title="User didn't know it existed"
+    base="The feature was built. The docs were written. The user never found either."
+    detail="This is a discoverability failure, not a writing failure. The content may exist but is not surfaced at the moment the user actually needs it. Check whether your docs appear in the right place in the product, not just in a reference index that users rarely browse."
+  />
+  <GapCard
+    tag="Task incomplete"
+    tagBg="#E6F1FB"
+    tagColor="#185FA5"
+    title="Found it, couldn't finish it"
+    base="The user located the feature but the documentation didn't carry them through to the end."
+    detail="Look for gaps at the step level. A step may be missing entirely, a required setup action may not have been mentioned upfront, or the screenshots in the docs may no longer match what the product looks like today. Any of these will stop a user mid-task."
+  />
+  <GapCard
+    tag="Unexpected result"
+    tagBg="#FAEEDA"
+    tagColor="#854F0B"
+    title="Task done, result unexpected"
+    base="The user followed the steps correctly and got a result they weren't prepared for."
+    detail="Add a short warning note just before the step that triggers the result. For example, if submitting an invoice automatically notifies the client, say so before the user clicks Submit. A one-sentence heads-up is all it takes. Users can handle an unexpected outcome when they are told about it upfront. What frustrates them is discovering it after the action has already happened."
+  />
+  <GapCard
+    tag="Error, no guidance"
+    tagBg="#FCEBEB"
+    tagColor="#A32D2D"
+    title="Error message, no next step"
+    base="The product showed an error. The documentation said nothing about what to do next."
+    detail="Build a troubleshooting page that maps common error messages to clear resolution steps. If a user can copy the error text, search your docs, and land on a page that tells them exactly what to do, that ticket never gets raised."
+  />
+</div>
+
+---
+
+## How to find the tickets worth acting on
+
+The goal here is not to document your way out of every support ticket. It is to find the ones where good documentation would have made a real difference. Hover each step to see how.
+
+<div style={{display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '10px', margin: '1.25rem 0 2rem'}}>
+  <StepCard
+    num="01"
+    title="Pull your top 20 recurring ticket types"
+    base="Start with the questions that come up most often, not the ones that are hardest to answer."
+    detail="Work with your support team to group tickets by topic and count how often each one comes up. A question that arrives 20 times a week has more impact on your users than a rare edge case, even if the edge case is technically more complex."
+  />
+  <StepCard
+    num="02"
+    title="Identify where documentation can help"
+    base="Not every ticket is a documentation problem, and that is fine."
+    detail="Some tickets are caused by product bugs or confusing UI design, and those are not yours to fix. What you are looking for are the tickets where a clear, well-placed article would have given the user the answer before they needed to ask. Those are your opportunities."
+  />
+  <StepCard
+    num="03"
+    title="Write to close the loop"
+    base="Write the content that would have helped the user before they raised the ticket."
+    detail="Then think about where the user would have looked before raising the ticket, and put the article there. A thorough troubleshooting guide that lives three clicks deep in a sidebar still fails the user if they cannot find it when they need it."
+  />
+</div>
+
+---
+
+## One metric worth tracking: ticket deflection rate
+
+When you improve documentation and fewer users need to contact support, that is called ticket deflection. It is one of the clearest ways to show the business value of your documentation work, because it translates directly into time and cost saved.
+
+<MetricBar />
+
+---
+
+## What this looks like when it is working well
+
+A documentation approach built on support signals tends to have three things in common.
+
+**Reactive coverage:** There is a dedicated article for every topic that consistently drives support tickets. Not a general overview that mentions the topic in passing. A focused piece that answers the exact question users are asking.
+
+**Proactive placement:** The article is not just sitting in the help portal. It is surfaced inside the product at the moment a user is likely to need it. For example, as a contextual help link next to a setting, or as a tooltip on a step that commonly causes confusion.
+
+**A process for keeping it current:** Support agents flag documentation-related tickets, writers review those flags regularly, and articles are updated in the same cycle as the product changes that made them outdated.
+
+---
+
+## Try this this week
+
+Pull your last 30 support tickets. For each one, ask: if a user had searched our docs before raising this ticket, would they have found a useful answer?
+
+You do not need a formal audit to answer that. A quick pass through 30 tickets will show you more about where your documentation needs work than most content reviews ever will.

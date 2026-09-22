@@ -1,0 +1,150 @@
+import {themes as prismThemes} from 'prism-react-renderer';
+import type {Config} from '@docusaurus/types';
+import type * as Preset from '@docusaurus/preset-classic';
+
+const config: Config = {
+  title: 'Jyoti Kiran',
+  tagline: 'Technical Writer & Content Designer',
+  favicon: 'img/favicon.ico',
+
+  future: {
+    v4: true,
+  },
+
+  url: 'https://JKwrites-tech.github.io',
+  baseUrl: '/DocsThatSpeak/',
+
+  organizationName: 'JKwrites-tech',
+  projectName: 'DocsThatSpeak',
+  deploymentBranch: 'gh-pages',
+  trailingSlash: false,
+
+  customFields: {
+    deploymentUrl: 'https://JKwrites-tech.github.io/DocsThatSpeak/',
+  },
+
+  onBrokenLinks: 'throw',
+  onBrokenMarkdownLinks: 'warn',
+
+  i18n: {
+    defaultLocale: 'en',
+    locales: ['en'],
+  },
+
+  presets: [
+    [
+      'classic',
+      {
+        docs: {
+          sidebarPath: './sidebars.ts',
+          editUrl: 'https://github.com/JKwrites-tech/DocsThatSpeak/edit/main/',
+        },
+        blog: {
+          showReadingTime: true,
+          blogSidebarTitle: 'All Posts',
+          blogSidebarCount: 'ALL',
+          feedOptions: {
+            type: ['rss', 'atom'],
+            xslt: true,
+          },
+          editUrl: 'https://github.com/JKwrites-tech/DocsThatSpeak/edit/main/blog/',
+          onInlineTags: 'warn',
+          onInlineAuthors: 'warn',
+          onUntruncatedBlogPosts: 'warn',
+        },
+        theme: {
+          customCss: './src/css/custom.css',
+        },
+      } satisfies Preset.Options,
+    ],
+  ],
+
+  themeConfig: {
+    image: 'img/docusaurus-social-card.jpg',
+    colorMode: {
+      respectPrefersColorScheme: true,
+    },
+    navbar: {
+      title: 'Docs That Speak',
+      logo: {
+        alt: 'Docs That Speak Logo',
+        src: 'img/logo.svg',
+      },
+      items: [
+        {
+          type: 'docSidebar',
+          sidebarId: 'strategySidebar',
+          position: 'left',
+          label: 'Documentation Strategy',
+        },
+        {
+          type: 'docSidebar',
+          sidebarId: 'nextgenSidebar',
+          position: 'left',
+          label: 'Next-Gen Docs',
+        },
+        {
+          to: '/about',
+          label: 'About the Author',
+          position: 'left',
+        },
+        {
+          href: 'https://github.com/JKwrites-tech/DocsThatSpeak',
+          label: 'Repository',
+          position: 'right',
+        },
+      ],
+    },
+    footer: {
+      style: 'dark',
+      links: [
+        {
+          title: 'Docs',
+          items: [
+            {
+              label: 'Documentation Strategy',
+              to: '/docs/strategy/intro',
+            },
+            {
+              label: 'Next-Gen Docs',
+              to: '/docs/nextgen/intro',
+            },
+          ],
+        },
+        {
+          title: 'Connect',
+          items: [
+            {
+              label: 'LinkedIn',
+              href: 'https://www.linkedin.com/in/jyoti-kiran-a48523116',
+            },
+            {
+              label: 'GitHub',
+              href: 'https://github.com/JKwrites-tech/DocsThatSpeak',
+            },
+          ],
+        },
+        {
+          title: 'More',
+          items: [
+            {
+              label: 'Welcome Note',
+              to: '/blog/welcome',
+            },
+            {
+              label: 'About the Author',
+              to: '/about',
+            },
+          ],
+        },
+      ],
+      copyright: `Copyright © ${new Date().getFullYear()} Jyoti Kiran. Built with Docusaurus.`,
+    },
+    prism: {
+      theme: prismThemes.github,
+      darkTheme: prismThemes.dracula,
+    },
+  } satisfies Preset.ThemeConfig,
+};
+
+export default config;
