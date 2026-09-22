@@ -5,21 +5,21 @@ import Link from '@docusaurus/Link';
 export default function Home() {
   return (
     <Layout
-      title="Jyoti Kiran"
-      description="Technical Writer & Content Designer">
+      title="Jyothi Kiran"
+      description="Senior Technical Writer & Content Designer">
       <main style={{padding: '4rem 2rem', textAlign: 'center'}}>
 
         <img
           src="img/hero-animated.svg"
-          alt="Jyoti Kiran - Technical Writer and Content Designer"
+          alt="Jyothi Kiran - Senior Technical Writer and Content Designer"
           width="540"
           style={{ maxWidth: '100%', marginBottom: '1.5rem' }}
         />
 
-        <h1>Jyoti Kiran</h1>
-        <h2>Technical Writer & Content Designer</h2>
+        <h1>Jyothi Kiran</h1>
+        <h2>Senior Technical Writer & Content Designer</h2>
         <p style={{maxWidth: '600px', margin: '1rem auto'}}>
-          Practical insights on documentation strategy and next-gen writing.
+          Practical frameworks for documentation that works, from core strategy to how AI is changing technical writing.
         </p>
 
         <p style={{marginTop: '1rem'}}>
